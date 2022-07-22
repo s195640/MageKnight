@@ -42,17 +42,17 @@
 
 <body>
 	<div id="gameContainer">
-		<canvas id="unity-canvas" data-pixel-art=""></canvas>
+		<canvas id="unity-container" data-pixel-art=""></canvas>
 		<script src="Build/webProd.loader.js"></script>
 		<script>
-			createUnityInstance(document.querySelector("#unity-canvas"), {
+			createUnityInstance(document.querySelector("#unity-container"), {
 				dataUrl: "Build/webProd.data",
 				frameworkUrl: "Build/webProd.framework.js",
 				codeUrl: "Build/webProd.wasm",
 				streamingAssetsUrl: "StreamingAssets",
 				companyName: "CNA",
 				productName: "MageKnight",
-				productVersion: "1.2.1",
+				productVersion: "1.2.3",
 			}).then(function (instance) {
 				var canvas = instance.Module.canvas;
 				var container = canvas.parentElement;
